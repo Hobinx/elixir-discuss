@@ -10,7 +10,6 @@ defmodule Discuss.Topic do
     timestamps()
   end
 
-  @doc false
   def changeset(%Topic{} = topic, attrs) do
     topic
     |> cast(attrs, [:title])
