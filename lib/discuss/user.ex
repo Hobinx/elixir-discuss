@@ -13,7 +13,7 @@ defmodule Discuss.User do
   end
 
   @doc false
-  def changeset(%User{} = user, attrs) do
+  def changeset(%User{} = user, attrs \\ %{}) do
     user
     |> cast(attrs, [:email, :provider, :token])
     |> validate_required([:email, :provider, :token])
